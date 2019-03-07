@@ -1,6 +1,8 @@
 card_number = "5541808923795240"
 
-# Your Luhn Algorithm Here
+class Credit_check
+  
+end
 
 # Output
 ## If it is valid, print "The number [card number] is valid!"
