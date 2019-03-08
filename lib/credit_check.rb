@@ -7,17 +7,18 @@ class Credit_check
     end
   end
 
-  def double_every_other_digit
-    # require 'pry'; binding.pry
+  def double_every_other_digit(card_number)
+    digits = card_number.split("").reverse
     doubled_digits = []
-    each_digit.each_with_index.map do |digit, index|
-      if (index % 2 != 0)
-        doubled_digits << digit * 2
+    # require 'pry'; binding.pry
+    digits.each_with_index do |digit, index|
+      if(index % 2 != 0)
+        doubled_digits << digit.to_i * 2
       else
-        doubled_digits << digit
+        doubled_digits << digit.to_i
       end
     end
-    doubled_digits
+    doubled_digits.reverse
   end
 end
 
