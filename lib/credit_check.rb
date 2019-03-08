@@ -10,7 +10,6 @@ class Credit_check
   def double_every_other_digit(card_number)
     digits = card_number.split("").reverse
     doubled_digits = []
-    # require 'pry'; binding.pry
     digits.each_with_index do |digit, index|
       if(index % 2 != 0)
         doubled_digits << digit.to_i * 2
@@ -21,8 +20,22 @@ class Credit_check
     doubled_digits.reverse
   end
 
-  # def digits_greater_than_9
-  # end
+  def digits_greater_than_9
+    higher_than_9 = []
+    # require 'pry'; binding.pry
+    digits = double_every_other_digit("5541808923795240")
+    digits.each do |digit|
+      if (digit >= 10)
+        higher_than_9 << digit - 9
+      else
+        higher_than_9 << digit
+      end
+    end
+    higher_than_9
+  end
+
+  def digits_sum
+  end 
 end
 
 # Output
