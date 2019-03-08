@@ -8,7 +8,17 @@ class Credit_check
   end
 
   def double_every_other_digit
-    each_digit.
+    # require 'pry'; binding.pry
+    each_digit.each_with_index do |a, b|
+      if (b % 2 == 0)
+        a = a * 2
+      end
+      each_digit.map! do |x|
+        if (a > 9)
+          a = a - 9
+        end
+      end
+    end
   end
 end
 
