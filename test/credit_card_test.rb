@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/credit_card'
+require './lib/credit_check'
 
 class CreditCardTest < Minitest::Test
   def setup

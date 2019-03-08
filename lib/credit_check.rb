@@ -1,7 +1,7 @@
 
 class Credit_check
-  def each_digit
-    card_number = "5541808923795240"
+  def each_digit(card_number)
+    # card_number = "5541808923795240"
     card_number.each_char.map do |char|
       char.to_i
     end
@@ -20,9 +20,9 @@ class Credit_check
     doubled_digits.reverse
   end
 
-  def digits_greater_than_9
+  def digits_greater_than_9(card_number)
+    digits = double_every_other_digit(card_number)
     higher_than_9 = []
-    digits = double_every_other_digit("5541808923795240")
     digits.each do |digit|
       if (digit >= 10)
         higher_than_9 << digit - 9
@@ -33,32 +33,27 @@ class Credit_check
     higher_than_9
   end
 
-  def digits_sum
-    digits_greater_than_9.sum
+  def digits_sum(card_number)
+    digits_greater_than_9(card_number).sum
   end
 
-  def divisible_by_10?
-    # require 'pry'; binding.pry
-    digits_sum % 10 == 0
+  def divisible_by_10?(card_number)
+    digits_sum(card_number) % 10 == 0
   end
 
-  def valid_card?
-    if divisible_by_10? == true
+  def valid_card?(card_number)
+    if divisible_by_10?(card_number) == true
       return true
-    else divisible_by_10? == false
+    else divisible_by_10?(card_number) == false
       return false
     end
   end
 
-  def validation_output
-    if valid_card? == true
+  def validation_output(card_number)
+    if valid_card?(card_number) == true
       "The number is valid!"
-    else valid_card? == false
+    else valid_card?(card_number) == false
       "The number is invalid!"
     end
   end
 end
-
-# Output
-## If it is valid, print "The number [card number] is valid!"
-## If it is invalid, print "The number [card number] is invalid!"
