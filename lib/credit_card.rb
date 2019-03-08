@@ -8,9 +8,9 @@ class CreditCard
 
   def is_valid?
     # require 'pry'; binding.pry
-    if @credit_check.valid_card? == true
+    if Credit_check.new.valid_card?(card_number) == true
       return true
-    else @credit_check.valid_card? == false
+    else Credit_check.new.valid_card?(card_number) == false
       return false
     end
   end
