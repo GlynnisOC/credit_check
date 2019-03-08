@@ -41,6 +41,22 @@ class Credit_check
     # require 'pry'; binding.pry
     digits_sum % 10 == 0
   end
+
+  def valid_card?
+    if divisible_by_10? == true
+      return true
+    else divisible_by_10? == false
+      return false
+    end
+  end
+
+  def validation_output
+    if valid_card? == true
+      "The number is valid!"
+    else valid_card? == false
+      "The number is invalid!"
+    end
+  end
 end
 
 # Output

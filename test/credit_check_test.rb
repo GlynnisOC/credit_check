@@ -30,4 +30,12 @@ class Credit_checkTest < Minitest::Test
   def test_is_it_divisible_by_10
     assert true, @credit_check.divisible_by_10?
   end
+
+  def test_it_returns_valid_card
+    assert_equal true, @credit_check.valid_card?
+  end
+
+  def test_it_returns_card_validation_output
+    assert_equal "The number is valid!", @credit_check.validation_output
+  end
 end
