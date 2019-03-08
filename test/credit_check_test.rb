@@ -18,4 +18,8 @@ class Credit_checkTest < Minitest::Test
   def test_it_doubles_every_other_digit
     assert_equal [10, 5, 8, 1, 16, 0, 16, 9, 4, 3, 14, 9, 10, 2, 8, 0], @credit_check.double_every_other_digit("5541808923795240")
   end
+
+  def test_it_fixes_digits_greater_than_9
+    assert_equal [1, 5, 8, 1, 7, 0, 7, 9, 4, 3, 5, 9, 1, 2, 8, 0], @creditcard1.digits_greater_than_9
+  end
 end
