@@ -26,4 +26,8 @@ class Credit_checkTest < Minitest::Test
   def test_it_returns_the_digits_sum
     assert_equal 70, @credit_check.digits_sum
   end
-end 
+
+  def test_is_it_divisible_by_10
+    assert true, @credit_check.divisible_by_10?
+  end
+end
