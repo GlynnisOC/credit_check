@@ -16,6 +16,6 @@ class Credit_checkTest < Minitest::Test
   end
 
   def test_it_doubles_every_other_digit
-    assert_equal [10, 5, 8, 1, 16, 0, 16, 9, 4, 3, 14, 9, 10, 2, 8, 0], @credit_check.double_every_other_digit
-  end 
+    assert_equal [10, 5, 8, 1, 16, 0, 16, 9, 4, 3, 14, 9, 10, 2, 8, 0], @credit_check.double_every_other_digit("5541808923795240")
+  end
 end
