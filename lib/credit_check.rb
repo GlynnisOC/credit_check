@@ -35,7 +35,8 @@ class Credit_check
   end
 
   def digits_sum
-  end 
+    digits_greater_than_9.sum
+  end
 end
 
 # Output
