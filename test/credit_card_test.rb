@@ -19,7 +19,8 @@ class CreditCardTest < Minitest::Test
   def test_it_returns_last_four
     assert_equal "5240", @creditcard1.last_four
   end
-end
 
-# pry(main)> credit_card.is_valid?
-# #=> true
+  def test_is_card_valid
+    assert_equal true, @creditcard1.is_valid?
+  end
+end
