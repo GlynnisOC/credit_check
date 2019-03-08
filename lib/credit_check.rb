@@ -20,6 +20,9 @@ class Credit_check
     end
     doubled_digits.reverse
   end
+
+  # def digits_greater_than_9
+  # end
 end
 
 # Output
