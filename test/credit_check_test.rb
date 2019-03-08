@@ -20,6 +20,6 @@ class Credit_checkTest < Minitest::Test
   end
 
   def test_it_fixes_digits_greater_than_9
-    assert_equal [1, 5, 8, 1, 7, 0, 7, 9, 4, 3, 5, 9, 1, 2, 8, 0], @creditcard1.digits_greater_than_9
+    assert_equal [1, 5, 8, 1, 7, 0, 7, 9, 4, 3, 5, 9, 1, 2, 8, 0], @credit_check.digits_greater_than_9
   end
 end
