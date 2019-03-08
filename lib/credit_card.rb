@@ -7,6 +7,12 @@ class CreditCard
   end
 
   def is_valid?
+    # require 'pry'; binding.pry
+    if Credit_check.new.valid_card?(card_number) == true
+      return true
+    else Credit_check.new.valid_card?(card_number) == false
+      return false
+    end
   end
 
   def last_four
