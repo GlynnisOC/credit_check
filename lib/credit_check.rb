@@ -25,7 +25,7 @@ class Credit_check
     # require 'pry'; binding.pry
     digits = double_every_other_digit("5541808923795240")
     digits.each do |digit|
-      if (digit >= 9)
+      if (digit >= 10)
         higher_than_9 << digit - 9
       else
         higher_than_9 << digit
@@ -33,6 +33,9 @@ class Credit_check
     end
     higher_than_9
   end
+
+  def digits_sum
+  end 
 end
 
 # Output
